@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
-import { ModeToggle } from '@/components/mode-toggle'
+import { Analytics } from "@vercel/analytics/react"
 import Header from './header'
 import { Footer } from './footer'
 const inter = Inter({ subsets: ['latin'] })
@@ -30,6 +30,7 @@ export default function RootLayout ({
             <Header />
           </div>
           {children}
+          <Analytics />
           <div>
             <Footer />
           </div>
